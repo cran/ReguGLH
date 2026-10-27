@@ -1,0 +1,14 @@
+bibentry(
+  bibtype = "Article",
+  title = "High-dimensional general linear hypothesis tests via non-linear spectral shrinkage",
+  author = c(person("Haoran", "Li"), person("Alexander", "Aue"),
+             person("Debashis", "Paul")),
+  journal = "Bernoulli",
+  year = "2020",
+  volume = "26",
+  number = "4",
+  pages = "2541--2571",
+  doi = "10.3150/19-BEJ1186",
+  url = "https://doi.org/10.3150/19-BEJ1186",
+  header = "To cite the methods implemented in ReguGLH, please cite:"
+)

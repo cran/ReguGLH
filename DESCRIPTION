@@ -1,0 +1,22 @@
+Package: ReguGLH
+Type: Package
+Title: General Linear Hypothesis Tests via Spectral Shrinkage
+Version: 0.1.0
+Authors@R: person("Haoran", "Li", role = c("aut", "cre"), email = "hzl0152@auburn.edu")
+Contact: Haoran Li <haoranli1990@gmail.com> (secondary email)
+Description: Implements high-dimensional general linear hypothesis tests using
+    ridge, reciprocal cubic polynomial, and user-defined analytic spectral
+    regularizers. Provides prior-based shrinkage selection and Gaussian
+    maximum calibration for composite tests. Implements the methods of
+    Li, Aue and Paul (2020), "High-dimensional general linear hypothesis
+    tests via non-linear spectral shrinkage", Bernoulli, 26(4), 2541-2571
+    <doi:10.3150/19-BEJ1186>.
+License: GPL-3
+Encoding: UTF-8
+Imports: stats
+NeedsCompilation: no
+Packaged: 2026-10-17 22:07:23 UTC; haoranli
+Author: Haoran Li [aut, cre]
+Maintainer: Haoran Li <hzl0152@auburn.edu>
+Repository: CRAN
+Date/Publication: 2026-10-27 18:40:08 UTC

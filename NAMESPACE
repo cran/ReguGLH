@@ -1,0 +1,4 @@
+export(glh_test)
+export(cubic_grid)
+export(shrinkage_moments)
+importFrom(stats,pnorm,rnorm,setNames)

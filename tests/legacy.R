@@ -1,0 +1,16 @@
+library(ReguGLH)
+source("legacy-reference.R")
+set.seed(104)
+Y <- matrix(rnorm(12*60),12,60)
+X <- t(model.matrix(~factor(rep(1:3,each=20))-1))
+C <- cbind(c(1,-1,0),c(0,1,-1))
+n <- ncol(Y)-nrow(X)
+residual <- t(qr.resid(qr(t(X)),t(Y)))
+ee <- eigen(tcrossprod(residual)/n,symmetric=TRUE)
+set.seed(77)
+old <- legacy_reference(Y,X,C,ee$values,ee$vectors,BBB=2000)
+set.seed(77)
+new <- glh_test(Y,X,C,mode="composite",parameters=c(-.1,-1,-10),nsim=2000)
+stopifnot(max(abs(as.numeric(old$stat)-new$statistic)) < 1e-9,
+          all(abs(as.numeric(old$pvalue)-new$p.value) <
+            4*sqrt(new$p.value*(1-new$p.value)/2000)+1/2000))
